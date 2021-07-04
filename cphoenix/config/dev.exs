@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :cphoenix, Cphoenix.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "password",
   database: "cphoenix_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

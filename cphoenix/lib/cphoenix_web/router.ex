@@ -7,6 +7,7 @@ defmodule CphoenixWeb.Router do
 
   scope "/api", CphoenixWeb do
     pipe_through :api
+    resources "/posts", PostController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
