@@ -15,3 +15,18 @@ def test_same_object():
     assert A is A
     assert a is a
     assert a is not a2
+
+
+def test_same_type():
+    class B:
+        pass
+    class A:
+        pass
+    a = A()
+    b = B()
+    assert type(a) == A
+    assert type(b) == B
+    assert type(b) != bool
+    assert type(True) == bool
+    assert type(10.5) == float
+    assert type(10) == int
