@@ -22,10 +22,15 @@ def test_same_type():
         pass
     class A:
         pass
+    class C(A):
+        pass
     a = A()
     b = B()
+    c = C()
     assert type(a) == A
     assert type(b) == B
+    assert isinstance(c, A)
+    assert isinstance(c, C)
     assert type(b) != bool
     assert type(True) == bool
     assert type(10.5) == float
